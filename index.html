@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback and Attendance Form</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous" defer></script>
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <span class="big-circle"></span>
+    <img src="./images/shape.png" class="square" />
+    <div class="form">
+      <div class="Event-info">
+        <img src="./images/tn.png" style="width: 100%;" alt="tech knockdown">
+        <p>A Comprehensive Introduction To Technologies.</p>
+        <img src="./images/gp20.png" class="image">
+      </div>
+
+      <div class="contact-form">
+        <span class="circle one"></span>
+        <span class="circle two"></span>
+
+        <form action="/route" method="POST">
+          <h3 class="title">Feedback Form</h3>
+          <div class="input-container">
+            <input type="text" name="name" class="input" pattern="^[a-zA-Z ]{2,}$" title="Characters only" required>
+            <label for="">Name</label>
+            <span>name</span>
+          </div>
+          <div class="input-container">
+            <input type="text" name="stdno" class="input" pattern="^2[01]{1}\d{5}(?:-[dD]{1}){0,1}$"
+              title="Enter valid student number" required>
+            <label for="">Student Number</label>
+            <span>student number</span>
+          </div>
+          <div class="input-container">
+            <input type="email" name="email" class="input"
+              pattern="^[a-zA-Z]{0,}2[01]{1}\d{5}(?:-[dD]{1}){0,1}@akgec\.ac\.in$" title="AKGEC email id only" required onfocus="autofillEmail()">
+            <label for="">Email</label>
+            <span>email</span>
+          </div>
+          <div class="input-container textarea">
+            <input name="message" class="input inp-textarea" pattern="^(?:\b\w+\b[\s\r\n]*){5,}$"
+              title="Minimum 5 words" required>
+            <label for="">Feedback</label>
+            <span>feedback</span>
+          </div>
+          <input type="submit" class="btn">
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
